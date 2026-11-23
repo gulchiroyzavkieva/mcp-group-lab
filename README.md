@@ -67,8 +67,16 @@ python compare_models.py --no-tools                                # same, witho
 | Correct answer (of 10) | 6 | 4 | 4 |
 | Average seconds | 26.9 | 2.6 | 5.0 |
 
-Without MCP (Ollama only), no model could show rows from the database, and 15 of 30 answers
-contained made-up sales or figures. Full results are in the `results_*.csv` files.
+Without MCP (Ollama only), the same 10 questions with no tools:
+
+| Measure | qwen3:4b | qwen3:8b | qwen3:14b |
+| --- | --- | --- | --- |
+| Answers with made-up sales or figures (of 10) | 7 | 4 | 4 |
+| Correct answer (of 10) | 1 | 6 | 5 |
+| Average seconds | 16.9 | 4.8 | 8.9 |
+
+Without MCP, no model could show rows from the database, and 15 of 30 answers contained made-up
+sales or figures. With MCP, no answer contained made-up data. Full results are in the `results_*.csv` files.
 
 ## Security
 
