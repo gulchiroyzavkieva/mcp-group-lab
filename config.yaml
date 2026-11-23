@@ -1,0 +1,6 @@
+# Redis connection for Tara's monitoring API (local Redis on my Mac)
+redis:
+  host: localhost
+  port: 6379
+  user:
+  password:

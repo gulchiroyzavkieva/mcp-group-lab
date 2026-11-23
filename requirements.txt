@@ -1,0 +1,9 @@
+mcp>=2,<3
+httpx
+ollama
+flask
+flask-restx
+pymongo
+python-dotenv
+redis
+pyyaml

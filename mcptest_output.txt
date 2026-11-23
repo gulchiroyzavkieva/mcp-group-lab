@@ -1,0 +1,100 @@
+Available MCP tools:
+
+Name: search_sales
+Description: Retrieve a limited sample of historical UCI Online Retail transaction rows.
+Arguments: {
+  "type": "object",
+  "properties": {
+    "country": {
+      "default": "",
+      "title": "Country",
+      "type": "string"
+    },
+    "limit": {
+      "default": 10,
+      "title": "Limit",
+      "type": "integer"
+    }
+  },
+  "title": "search_salesArguments"
+}
+
+Name: get_statistics
+Description: Retrieve application monitoring statistics from Redis. 
+Arguments: {
+  "type": "object",
+  "properties": {},
+  "title": "get_statisticsArguments"
+}
+
+Calling search_sales: {'country': 'United Kingdom', 'limit': 5}
+Tool error: False
+{
+  "count": 5,
+  "results": [
+    {
+      "InvoiceNo": "536365",
+      "StockCode": "21730",
+      "Description": "GLASS STAR FROSTED T-LIGHT HOLDER",
+      "Quantity": 6,
+      "InvoiceDate": "12/1/2010 8:26",
+      "UnitPrice": 4.25,
+      "CustomerID": "17850",
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": "536373",
+      "StockCode": "84029E",
+      "Description": "RED WOOLLY HOTTIE WHITE HEART.",
+      "Quantity": 6,
+      "InvoiceDate": "12/1/2010 9:02",
+      "UnitPrice": 3.39,
+      "CustomerID": "17850",
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": "536375",
+      "StockCode": "21071",
+      "Description": "VINTAGE BILLBOARD DRINK ME MUG",
+      "Quantity": 6,
+      "InvoiceDate": "12/1/2010 9:32",
+      "UnitPrice": 1.06,
+      "CustomerID": "17850",
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": "536375",
+      "StockCode": "21730",
+      "Description": "GLASS STAR FROSTED T-LIGHT HOLDER",
+      "Quantity": 6,
+      "InvoiceDate": "12/1/2010 9:32",
+      "UnitPrice": 4.25,
+      "CustomerID": "17850",
+      "Country": "United Kingdom"
+    },
+    {
+      "InvoiceNo": "536378",
+      "StockCode": "20723",
+      "Description": "STRAWBERRY CHARLOTTE BAG",
+      "Quantity": 10,
+      "InvoiceDate": "12/1/2010 9:37",
+      "UnitPrice": 0.85,
+      "CustomerID": "14688",
+      "Country": "United Kingdom"
+    }
+  ]
+}
+
+Calling get_statistics: {}
+Tool error: False
+{
+  "failed_requests": 0,
+  "failed_tool_requests": 0,
+  "last_request_time": "2026-11-23T12:05:42",
+  "mongodb_requests": 1,
+  "redis_requests": 1,
+  "total_queries": 0,
+  "total_requests": 2
+}
+
+Both tool calls passed.
